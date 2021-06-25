@@ -1,0 +1,72 @@
+// about section 
+.about {
+    padding: 15rem 10rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--grey-light-3);
+    transform: skewY(-4deg);
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+    -o-transform: skewY(-4deg);
+    margin-top: -10vh;
+    @media only screen and (max-width: $bp-larger) {
+        padding: 12rem 7rem;
+        margin-top: -7vh;
+    }
+    @media only screen and (max-width: $bp-medium) {padding: 8rem 6rem;}
+    &>* {
+        transform: skewY(4deg);
+        -webkit-transform: skewY(4deg);
+        -moz-transform: skewY(4deg);
+        -ms-transform: skewY(4deg);
+        -o-transform: skewY(4deg);
+    }
+    &_icon {
+        font-size: 2rem;
+        color: rgb(233, 98, 98);
+    }
+    &-box {
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        @media only screen and (max-width: $bp-larger) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &_circle {
+        flex: 0 0 20%;
+        margin-right: 7rem;        
+        // background-color: var(--grey-light-3);
+        // padding: 4rem;
+        @media only screen and (max-width: $bp-larger) {margin-right: 0;}
+        &Text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2.5rem;
+            color: var(--color-grey-dark-1);
+            text-transform: capitalize;
+            background-color: var(--grey-light-1);
+            border-radius: 50%;
+            padding: 5rem;
+            box-shadow: 0 1rem 4rem rgba(0,0,0,.3);
+            @media only screen and (max-width: $bp-larger) {margin-bottom: 3rem;}
+        }
+    }
+    &_description {
+        flex: 1;
+
+        font-size: 1.5rem;
+        color: var(--color-grey-dark-1);
+        text-transform: capitalize;
+        word-spacing: .1rem;
+    }
+    &_paragraph {
+       &:not(:last-of-type) {
+           margin-bottom: 1rem;
+       }
+    }
+}
